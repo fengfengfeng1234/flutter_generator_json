@@ -1,0 +1,16 @@
+targets:
+  $default:
+    builders:
+      api_generator:
+        enabled: true
+
+
+
+builders:
+  jsonDataBuilder:
+    import: "package:json_parse_test/builder.dart"
+    builder_factories: ["jsonDataBuilder"]
+    build_extensions: {".dart": [".g.part"]}
+    auto_apply: root_package
+    build_to: source
+
