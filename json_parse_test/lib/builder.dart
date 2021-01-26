@@ -1,8 +1,6 @@
-
-
 import 'package:build/build.dart';
+import 'package:json_parse_test/src/HttpDataGenerator.dart';
 import 'package:source_gen/source_gen.dart';
-import 'src/JsonDataGenerator.dart';
 
 //
 // PartBuilder
@@ -18,9 +16,15 @@ import 'src/JsonDataGenerator.dart';
 ///相当于生成器的入口
 ///
 
-Builder  jsonDataBuilder(BuilderOptions options) =>
-    LibraryBuilder(JsonDataGenerator(),generatedExtension: '.g.dart');
+// Builder  jsonDataBuilder(BuilderOptions options) =>
+//     LibraryBuilder(JsonDataGenerator(),generatedExtension: '.g.dart');
 
+// 可以直接生成文件这种
+// Builder  httpDataBuilder(BuilderOptions options) =>
+//     LibraryBuilder(HttpBuilderGenerator(),generatedExtension: '.h.dart');
+
+Builder httpDataBuilder(BuilderOptions options) =>
+    SharedPartBuilder([HttpBuilderGenerator()], "http_api");
 
 // Builder  filedDataBuilder(BuilderOptions options) =>
 //     LibraryBuilder(FiledDataGenerator(),generatedExtension: '.table.dart');

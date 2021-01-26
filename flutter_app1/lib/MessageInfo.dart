@@ -1,8 +1,7 @@
-import 'package:json_parse_annotion/json_parse_annotion.dart';
-
+import 'package:json_annotation/json_annotation.dart';
 part 'MessageInfo.g.dart';
 
-@JsonParse()
+@JsonSerializable()
 class MessageInfo {
   final String desc;
   final int age;
@@ -10,5 +9,6 @@ class MessageInfo {
 
   MessageInfo({this.project, this.desc, this.age});
 
-  Map<String, dynamic> toJson() => _MessageInfoToJson(this);
+  factory MessageInfo.fromJson(Map<String, dynamic> json) => _$MessageInfoFromJson(json);
+  Map<String, dynamic> toJson() => _$MessageInfoToJson(this);
 }

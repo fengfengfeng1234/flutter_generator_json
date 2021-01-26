@@ -56,9 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
 
-    MessageInfo messageInfo = new MessageInfo();
-    print("11111111111111111111111111");
-    print(messageInfo.toJson());
+    // MessageInfo messageInfo = new MessageInfo();
+    // print("11111111111111111111111111");
+    // print(messageInfo.toJson());
 
     setState(() {
       // This call to setState tells the Flutter framework that something has

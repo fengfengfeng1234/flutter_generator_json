@@ -4,13 +4,20 @@ targets:
       api_generator:
         enabled: true
 
-
-
 builders:
-  jsonDataBuilder:
+  http_api:
     import: "package:json_parse_test/builder.dart"
-    builder_factories: ["jsonDataBuilder"]
-    build_extensions: {".dart": [".g.part"]}
-    auto_apply: root_package
-    build_to: source
+    builder_factories: ["httpDataBuilder"]
+    build_extensions: {".dart": [".http_api.g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
+
+#builders:
+#  httpDataBuilder:
+#    import: "package:json_parse_test/builder.dart"
+#    builder_factories: ["httpDataBuilder"]
+#    build_extensions: {".dart": [".h.part"]}
+#    auto_apply: root_package
+#    build_to: source
 
