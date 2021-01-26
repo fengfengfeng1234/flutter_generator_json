@@ -15,3 +15,13 @@ flutter使用source_gen构建简易InfoTojson解析效果
   
   
 4.flutter packages pub run build_runner build  
+
+
+
+// 
+  1.test 类中 可以直接debug  需要引用  source_gen_test
+  2. 查看   TestDemo 类
+  3.生成 part  part of 需要用 SharedPartBuilder 构造器
+
+// 
+   代码模板类 可以使用  code_builder
