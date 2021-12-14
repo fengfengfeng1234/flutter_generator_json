@@ -8,7 +8,7 @@ class MessageInfoRsp {
   final int age;
   final String project;
 
-  MessageInfoRsp({this.project, this.desc, this.age});
+  MessageInfoRsp({required this.project, required this.desc, required this.age});
 
   factory MessageInfoRsp.fromJson(Map<String, dynamic> json) =>
       _$MessageInfoRspFromJson(json);

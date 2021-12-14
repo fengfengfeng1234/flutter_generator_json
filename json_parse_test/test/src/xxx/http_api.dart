@@ -18,9 +18,14 @@ class _HttpApi implements HttpApi {
   configurations: ['default'],
 )
 // package:__test__/http_api.dart
-@Request()
-abstract class HttpApi {
+
+class HttpApi {
   HttpApi();
+
+  @Request()
+  void  login1(){
+
+  }
 
   @Code(3111)
   RequestSubscription<MessageInfoRsp> getUserInfo1(MessageInfo userInfo);
@@ -28,6 +33,17 @@ abstract class HttpApi {
   @Code(23)
   RequestSubscription<MessageInfoRsp> getUserInfo2(MessageInfo xxxxx);
 
-
-
 }
+
+// class  LoginTest2{
+//
+//
+//   @Request()
+//   void  login2(){
+//
+//   }
+//
+// }
+//
+
+

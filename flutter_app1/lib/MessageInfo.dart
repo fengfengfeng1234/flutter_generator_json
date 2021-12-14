@@ -7,7 +7,7 @@ class MessageInfo {
   final int age;
   final String project;
 
-  MessageInfo({this.project, this.desc, this.age});
+  MessageInfo({required this.project, required this.desc, required this.age});
 
   factory MessageInfo.fromJson(Map<String, dynamic> json) => _$MessageInfoFromJson(json);
   Map<String, dynamic> toJson() => _$MessageInfoToJson(this);

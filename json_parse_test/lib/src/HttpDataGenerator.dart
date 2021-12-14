@@ -26,6 +26,12 @@ class HttpBuilderGenerator extends GeneratorForAnnotation<httpState.Request> {
   }
 
   String _implementClass(ClassElement element, ConstantReader annotation) {
+
+
+    element.location?.components.forEach((element) {
+      print(element.toString());
+    });
+
     //获取类名称
     final className = element.name;
 

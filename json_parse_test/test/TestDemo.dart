@@ -7,10 +7,9 @@ import 'package:test/test.dart';
 Future<void> main() async {
   initializeBuildLogTracking();
   final reader = await initializeLibraryReaderForDirectory(
-      p.join('test', 'src'), 'http_api.dart');
+      p.join('test', 'src/xxx'), 'http_api.dart');
 
-  testAnnotatedElements(reader, HttpBuilderGenerator(),
-      expectedAnnotatedTests: _expectedAnnotatedTests);
+  testAnnotatedElements(reader, HttpBuilderGenerator());
 }
 
 //
