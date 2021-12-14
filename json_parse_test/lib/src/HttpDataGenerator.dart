@@ -86,7 +86,7 @@ class HttpBuilderGenerator extends GeneratorForAnnotation<httpState.Request> {
             ..name = it.name
             ..named = it.isNamed)));
 
-      mm.body = _generateRequest(m, httpMethod);
+      mm.body = _generateRequest(m, httpMethod!);
     });
   }
 
@@ -95,7 +95,7 @@ class HttpBuilderGenerator extends GeneratorForAnnotation<httpState.Request> {
   Code _generateRequest(MethodElement m, ConstantReader httpMethod) {
     final blocks = <Code>[];
     //获取到Code值
-    int code = httpMethod.peek("code").intValue;
+    int code = httpMethod.peek("code")!.intValue;
 
     blocks.add(
       refer("final int code = $code").statement,
@@ -134,7 +134,7 @@ class HttpBuilderGenerator extends GeneratorForAnnotation<httpState.Request> {
     httpState.Code,
   ];
 
-  ConstantReader _getMethodAnnotation(MethodElement method) {
+  ConstantReader? _getMethodAnnotation(MethodElement method) {
     for (final type in _methodsAnnotations) {
       final annot = _typeChecker(type)
           .firstAnnotationOf(method, throwOnUnresolved: false);

@@ -42,9 +42,9 @@ class JsonDataGenerator extends GeneratorForAnnotation<JsonParse> {
 
     String one =
         " Map<String, dynamic>  _" +
-        element.name +
+        element.name! +
         "ToJson(" +
-        element.name +
+        element.name! +
         " obj) => <String, dynamic>{\n\n";
 
     String two = "";

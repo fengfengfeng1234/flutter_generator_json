@@ -17,6 +17,7 @@ class _HttpApi implements HttpApi {
 ''',
   configurations: ['default'],
 )
+// package:__test__/http_api.dart
 @Request()
 abstract class HttpApi {
   HttpApi();
@@ -26,4 +27,7 @@ abstract class HttpApi {
 
   @Code(23)
   RequestSubscription<MessageInfoRsp> getUserInfo2(MessageInfo xxxxx);
+
+
+
 }

@@ -5,6 +5,6 @@ class MessageInfo {
   final int age;
   final String project;
 
-  MessageInfo({this.project, this.desc, this.age});
+  MessageInfo({required this.project, required this.desc, required this.age});
 
 }
